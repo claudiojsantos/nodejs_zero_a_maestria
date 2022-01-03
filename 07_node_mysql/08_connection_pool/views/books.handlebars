@@ -1,0 +1,31 @@
+<h1>Listagem de Livros</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Titulo</th>
+            <th scope="col">Qtd. Páginas</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each books}}
+        <tr>
+            <th scope="row">{{this.id}}</th>
+            <th scope="row">{{this.title}}</th>
+            <th scope="row">{{this.qtd_pages}}</th>
+            <th scope="row"><a class="btn btn-success" href="/book/{{this.id}}">Visualizar</a></th>
+            <th scope="row"><a class="btn btn-warning" href="/book/edit/{{this.id}}">Editar</a></th>
+            <th scope="row">
+                <form action="/book/delete/{{this.id}}" method="post">
+                    <button type="submit" class="btn btn-danger">Excluir</button>
+                </form>
+            </th>
+        </tr>
+        {{/each}}
+        <a href="/">Cadastrar Novo Livro</a>
+    </tbody>
+</table>
