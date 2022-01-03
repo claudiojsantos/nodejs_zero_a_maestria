@@ -1,0 +1,13 @@
+h1 {
+    text-align: center;
+}
+
+.form {
+    width: 450px;
+    margin: 0 auto;
+}
+
+#navbar ul li a:link {
+    text-decoration: none;
+    color: white;
+}
