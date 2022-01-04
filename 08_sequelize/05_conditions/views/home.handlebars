@@ -1,0 +1,21 @@
+<h1>Listagem de usuários</h1>
+
+<div class="row">
+{{#each users}}
+    <div class="col-4">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">{{this.name}}</h4>
+                <h6 class="card-subtitle mb-2 text-mutted">{{this.occupation}}</h6>
+                {{#if this.newsletter}}
+                    <p class="card-text">Habilitado para receber Promoções</p>
+                {{else}}
+                    <p class="card-text">Não autorizado enviar Promoções</p>
+                {{/if}}
+                <a href="user/view/{{this.id}}" class="card-link">Detalhes</a>
+                <a href="user/update/{{this.id}}" class="card-link">Editar</a>
+            </div>
+        </div>
+    </div>
+{{/each}}
+</div>
