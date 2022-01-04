@@ -1,0 +1,21 @@
+<h1>Adicionar Usuário</h1>
+
+<form action="/users/create" method="post" class="form">
+    <div class="col-md-12">
+        <label for="name" class="form-label">Nome</label>
+        <input type="text" name="name" id="name" class="form-control" value="{{user.name}}">
+    </div>
+    <div class="col-md-6">
+        <label for="occupation" class="form-label">Ocupação</label>
+        <input type="text" name="occupation" id="occupation" class="form-control" value="{{user.occupation}}">
+    </div>
+    <div class="col-md-12">
+        {{#if user.newsletter}}
+            <input type="checkbox" class="form-check-input:checkbox" name="newsletter" id="newsletter" checked>
+        {{else}}
+            <input type="checkbox" class="form-check-input:checkbox" name="newsletter" id="newsletter">
+        {{/if}}
+        <label for="newsletter" class="form-check-label">Enviar promoções?</label>
+    </div>
+    <input type="submit" value="Cadastrar" class="btn btn-primary">
+</form>
